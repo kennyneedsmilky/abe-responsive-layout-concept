@@ -1,0 +1,503 @@
+/* ケンミル */ /* 神様最高 */
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+
+/* Website Var */
+:root {
+  --base-font-family: ;
+  --body-color: #ffffff;
+  --base-text-color: #000000;
+  /* Website theme Colors */
+  --orange: #fea942;
+  --dark-orange: #f26721;
+  --nav-color: #f6f6ef;
+  --footer-color: #24afca;
+  --modal-background-color: #00000080;
+}
+
+/* Universal */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  scrollbar-width: none;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+button {
+  transition: 0.25s;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: var(--body-color);
+  color: var(--base-text-color);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  padding: 0.5rem;
+  background-color: var(--nav-color);
+  width: 100%;
+  height: 5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0 1rem 0;
+  width: 100%;
+  height: calc(100% - 1.5rem);
+  overflow-y: scroll;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base-text-color);
+  color: var(--body-color);
+  width: 100%;
+}
+
+a:hover,
+a:active,
+a.active {
+  background-color: var(--orange);
+  color: var(--body-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.header__logo {
+  transform: scale(0.8);
+  margin-right: 2rem;
+}
+
+.header__nav ul {
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.header__nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Header Links */
+.header__links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.dropdown,
+.sub-dropdown {
+  transition: 0.25s;
+}
+
+.dropdown:hover .dropdown-content,
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .fa-caret-down {
+  transform: rotate(180deg);
+}
+
+/* The dropdown content for the links */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0.5rem;
+  background-color: var(--nav-color);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+
+.dropdown-content a {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.sub-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.sub-dropdown a {
+  width: 100%;
+}
+
+.sub-dropdown-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: none;
+  border-radius: 0.5rem;
+  background-color: var(--nav-color);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  transform-origin: top left;
+  transform: translateX(100%);
+  min-width: 100%;
+}
+
+.sub-dropdown:hover {
+  background-color: var(--orange);
+  color: var(--body-color);
+}
+
+.sub-dropdown:hover .fa-caret-right {
+  transform: rotate(180deg);
+}
+
+.menu {
+  position: relative;
+}
+
+/* Menu Button */
+.menu-btn {
+  display: none;
+  border: 2px solid var(--orange);
+  border-radius: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5em;
+  transition: 0.25s;
+}
+
+.menu-btn.active {
+  background-color: var(--orange);
+}
+
+.menu-content {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: fixed;
+  z-index: 100;
+  align-items: center;
+  padding-top: 5rem;
+  background-color: var(--nav-color);
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.menu-content.hidden {
+  display: none;
+}
+
+.menu-content div {
+  width: 90%;
+}
+
+.menu__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.menu__link a {
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.menu__sub-mobile-cont {
+  width: 80%;
+}
+
+.--sub {
+  font-size: 1.15rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(#ffffffd0, #ffffffd0),
+    url("../img/city_buildings.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__wrapper {
+  display: flex;
+  max-width: 1000px;
+}
+
+.hero__sub-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.hero__img {
+  height: 90%;
+}
+
+.hero__title {
+  color: var(--dark-orange);
+  font-size: 2.75rem;
+}
+
+.hero__btn {
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--dark-orange);
+  margin: 1.5rem 0;
+  color: var(--body-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hero__btn:hover {
+  background-color: var(--orange);
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  background-color: var(--modal-background-color);
+  box-shadow: 5px 5px 5px var(--modal-background-color);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+.modal__cont {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--body-color);
+  margin: 10% 0;
+  width: 45%;
+  max-width: 500px;
+}
+
+.modal__close-btn-cont {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.modal__title {
+  color: var(--orange);
+}
+
+.modal__close-btn {
+  border: 3px solid var(--orange);
+  background-color: var(--body-color);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.modal__close-btn i {
+  pointer-events: none;
+}
+
+.modal__close-btn:hover {
+  background-color: var(--orange);
+  color: var(--body-color);
+}
+
+.modal__close-btn:active {
+  background-color: var(--dark-orange);
+}
+
+/* Modal Form */
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: var(--orange);
+  margin: 0.1rem;
+  overflow-y: scroll;
+  color: var(--body-color);
+}
+
+.modal__form-sub-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.modal__form input {
+  padding: 1rem;
+  width: 100%;
+  height: 2rem;
+}
+
+.modal__form input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0.5rem 0;
+  height: 3.5rem;
+  font-size: 1.25rem;
+}
+
+.modal__form-submit-btn {
+  border: 3px solid var(--body-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--orange);
+  color: var(--body-color);
+  font-size: 1rem;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.modal__form-submit-btn:hover,
+.modal__form-submit-btn:hover {
+  background-color: var(--dark-orange);
+}
+
+/* This class is used to hide things. */
+.hidden {
+  display: none;
+}
+
+/* Animations */
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px) {
+  .header__wrapper {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header__logo {
+    margin: none;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-content {
+    display: flex;
+  }
+
+  .hero__wrapper {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero__img {
+    width: 40%;
+  }
+
+  .hero__sub-cont {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    height: 50%;
+  }
+
+  .hero__title {
+    font-size: 1em;
+  }
+
+  .modal__cont {
+    width: 95%;
+    text-align: center;
+  }
+}

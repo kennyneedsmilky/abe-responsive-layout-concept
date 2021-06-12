@@ -1,0 +1,181 @@
+<!-- ケンミル --> <!-- 神様最高 -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Meta Info -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        
+        <script defer src="assets/js/main.js"></script>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/img/site_favicon_16_1613450197041.ico">
+        <title>Abe | Home</title>
+    </head>
+    <!-- markup -->
+    <body>
+        
+        <!-- header -->
+        <header>
+            <div class="header__wrapper">
+                <img class="header__logo" src="assets/img/company-logo.png" alt="abe">
+                <!-- Nav -->
+                <nav class="header__nav">
+                    <ul class="header__links">
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                            <li><a href="#">Services&nbsp;<i class="fas fa-caret-down"></i></a></li>
+                            <!-- Sub Menu -->
+                            <div class="dropdown-content">
+                                <!-- Sub Sub Menu -->
+                                <div class="sub-dropdown">
+                                    <a href="#">For Individuals & Families&nbsp;<i class="fas fa-caret-right"></i></a>
+                                    <div class="sub-dropdown-content">
+                                        <a href="#">Will and Estate Services</a>
+                                    </div>
+                                </div>
+                                <!-- Sub Sub Menu -->
+                                <div class="sub-dropdown">
+                                    <a href="#">For Businesses&nbsp;<i class="fas fa-caret-right"></i></a>
+                                    <div class="sub-dropdown-content">
+                                        <a href="#">Launch Business or Nonprofit</a>
+                                        <a href="#">Business Owner Will & Succession</a>
+                                        <a href="#">Grant & Loan Help</a>
+                                    </div>
+                                </div>
+                                <a href="#">For Lawyers</a>
+                                <a href="#">For Employers</a>
+                            </div>
+                        </div>
+                        
+
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a class="active" href="#">Home</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Drop Down Button for mobile devices -->
+                <div class="menu">
+                    <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </header>
+        <!-- Menu -->
+        <div class="menu-content hidden">
+            <!-- Link -->
+            <div class="menu-content__sub">
+                <h3>Services</h3>
+                <hr>    
+            </div>
+
+            <div class="">
+                <p>For Individuals & Families&nbsp;<i class="fas fa-caret-right"></i></p>
+            </div>
+            
+            <div class="menu__link --sub">
+                <a href="#">Will and Estate Services</a>
+            </div>
+            
+            <div class="">
+                <p>For Businesses&nbsp;<i class="fas fa-caret-right"></i></p>
+            </div>
+
+            <div class="menu__link --sub">
+                <a href="#">Launch Business or Nonprofit</a>
+                <a href="#">Business Owner Will & Succession</a>
+                <a href="#">Grant & Loan Help</a>
+            </div>
+
+            <div class="sub">
+                <p>Etc.&nbsp;<i class="fas fa-caret-right"></i></p>
+            </div>
+
+            <!-- Link -->
+            <div class="menu__link">
+                <a href="#">Team</a>
+            </div>
+
+            <!-- Link -->
+            <div class="menu__link">
+                <a href="#">About Us</a>
+            </div>
+
+            <!-- Link -->
+            <div class="menu__link">
+                <a href="#">Contact</a>
+            </div>
+            
+            <!-- Link -->
+            <div class="menu__link">
+                <a class="active" href="#">Home</a>
+            </div>
+            
+        </div>
+
+        <!-- Main -->
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero__wrapper">
+                    <div class="hero__sub-cont">
+                        <h2 class="hero__title">Appointment with World-Class Lawyers Quickly and Virtually</h2>
+                        <p>Schedule a Virtual Consultation with an Experienced Lawyer, Quickly from the Safety and Comfort of Your Home or Business.</p>
+                        <button class="hero__btn">Talk To A Lawyer</button>
+                    </div>
+                    <div class="hero__sub-cont">
+                        <img class="hero__img" src="assets/img/image-dce853c5-358w.png" alt="pic">
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            <p>Example By: Kenneth Fullbright</p>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal hidden">
+            <div class="modal__cont slide-in-top">
+                <div class="modal__close-btn-cont">
+                    <button class="modal__close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <h2 class="modal__title">Get Your Legal Questions Answered</h2>
+                <p>Provide Your Information, So We Can Get You On the Phone with an Abe Counsel Right Away!</p>
+                <form class="modal__form" action="#" method="GET">
+                    <div class="modal__form-sub-cont">
+                        <div>
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname"><br><br>
+                        </div>
+                        <div>
+                            <label for="lname">Last name:</label>
+                            <input type="text" id="lname" name="lname"><br><br>
+                        </div>
+                    </div>
+                    
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email"><br><br>
+
+                    <label for="phoneNum">Phone Number:</label>
+                    <input type="number" id="phoneNum" name="phoneNum" maxlength="12"><br><br>
+                    
+                    <label for="additionalInfo">Additional Information:</label>
+                    <input type="text" id="additionalInfo" name="additionalInfo" maxlength="300"><br><br>
+
+                    <label for="where">Where Legal Issue Occured</label>
+                    <input type="text" id="where" name="where" maxlength="300"><br><br>
+
+                    <label for="how">How did you hear about Abe?</label>
+                    <input type="text" id="how" name="how" maxlength="300"><br><br>
+
+                    <input class="modal__form-submit-btn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- End of HTML. -->
